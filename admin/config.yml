@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "artikler"
+    label: "Artikler"
+    folder: "innhold/artikler"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Tittel", name: "title", widget: "string" }
+      - { label: "Publiseringsdato", name: "date", widget: "datetime" }
+      - { label: "Innhold", name: "body", widget: "markdown" }
